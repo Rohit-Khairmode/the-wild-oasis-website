@@ -19,18 +19,16 @@ export const metadata = {
     template: "%s / The Wild Oasis",
     default: "Welcome / The Wild Oasis",
   },
-  description:
-    "Luxurious cabin hotel, located in the heart of the Italian Dolomites, surrounded by beautiful mountains and dark forests",
 };
 
 function RootLayout({ children }) {
   return (
     <html>
       <body
-        className={`${josefin.className} antialiased bg-primary-950 text-primary-100 min-h-screen flex flex-col relative`}
+        className={`${josefin.className} antialiased bg-primary-950 text-primary-100 min-h-screen flex flex-col relative overflow-hidden`}
       >
         <Header />
-        <div className="flex-1 px-8 py-12 grid">
+        <div className="flex-1 lg:px-8 lg:py-12 px-6 py-10 grid">
           <main className="max-w-7xl mx-auto w-full">
             <ReservationProvider>{children}</ReservationProvider>
           </main>
